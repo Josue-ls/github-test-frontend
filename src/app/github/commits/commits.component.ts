@@ -12,6 +12,10 @@ export class CommitsComponent implements OnInit {
   constructor(private readonly githubService: GithubService) {}
 
   ngOnInit() {
+    this.getCommits();
+  }
+
+  getCommits() {
     this.githubService.getCommits('github-test-backend').subscribe({
       next: (data) => Object.assign(this.commitList, data),
       error: (e) => console.error(e),
