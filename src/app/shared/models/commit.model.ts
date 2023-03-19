@@ -13,10 +13,10 @@ export interface Commit {
       date: string;
     };
     message: string;
-    tree: {};
+    tree: object;
     url: string;
     comment_count: number;
-    verification: {};
+    verification: object;
   };
   url: string;
   html_url: string;
@@ -41,6 +41,6 @@ export interface Commit {
     type: string;
     site_admin: false;
   };
-  committer: {};
+  committer: object;
   parents: [];
 }
