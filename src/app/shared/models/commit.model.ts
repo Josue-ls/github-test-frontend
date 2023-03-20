@@ -44,3 +44,22 @@ export interface Commit {
   committer: object;
   parents: [];
 }
+
+export interface CommitSocket {
+  author: string;
+  avatar_url: string;
+  date: string;
+  commitId: string;
+  message: string;
+}
+
+export interface SenderData {
+  login: string;
+  node_id: string;
+  avatar_url: string;
+}
+
+export interface SenderCommit {
+  timestamp: string;
+  message: string;
+}
