@@ -14,7 +14,7 @@
     <p class="text-sm">{{ commit?.author?.login || commit?.author }}</p>
     <p class="text-sm">{{ commit?.commit?.message || commit?.message }}</p>
     <p class="text-xs text-gray-500">
-      {{ commit?.commit?.committer?.date || commit?.date | date : "medium" }}
+      {{ (commit?.commit?.committer?.date || commit?.date) | date : "medium" }}
     </p>
   </div>
 </div>
