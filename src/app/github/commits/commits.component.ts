@@ -57,8 +57,7 @@ export class CommitsComponent implements OnInit, OnDestroy {
     sender: SenderData;
   }): void {
     commits.forEach((commit: SenderCommit) => {
-      console.log({ commit });
-      this.commitRealTime.push({
+      this.commitRealTime.unshift({
         author: sender.login,
         avatar_url: sender.avatar_url,
         date: commit.timestamp,
