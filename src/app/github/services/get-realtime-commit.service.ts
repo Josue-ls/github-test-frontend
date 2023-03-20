@@ -19,10 +19,6 @@ export class GetRealtimeCommitService {
     this.socket.disconnect();
   }
 
-  // public emit(event: string, data: any): void {
-  //   this.socket.emit(event, data);
-  // }
-
   public on(event: string): Observable<any> {
     return new Observable<any>((observer) => {
       this.socket.on(event, (data) => {
