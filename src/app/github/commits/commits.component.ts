@@ -31,9 +31,11 @@ export class CommitsComponent implements OnInit, OnDestroy {
   }
 
   getCommits() {
-    this.commitRealTime = [];
     this.githubService.getCommits('github-test-frontend').subscribe({
-      next: (data) => Object.assign(this.commitList, data),
+      next: (data) => {
+        this.commitRealTime = [];
+        Object.assign(this.commitList, data);
+      },
       error: (e) => console.error(e),
     });
   }
