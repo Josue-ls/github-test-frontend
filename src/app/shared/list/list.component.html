@@ -4,14 +4,17 @@
   </div>
   <div class="w-12 mr-5">
     <figure>
-      <img src="{{ commit.author.avatar_url }}" class="rounded-full" />
+      <img
+        src="{{ commit?.author?.avatar_url || commit?.avatar_url }}"
+        class="rounded-full"
+      />
     </figure>
   </div>
   <div class="w-11/12">
-    <p class="text-sm">{{ commit.author.login }}</p>
-    <p class="text-sm">{{ commit.commit.message }}</p>
+    <p class="text-sm">{{ commit?.author?.login || commit?.author }}</p>
+    <p class="text-sm">{{ commit?.commit?.message || commit?.message }}</p>
     <p class="text-xs text-gray-500">
-      {{ commit.commit.committer.date | date : "long" }}
+      {{ commit?.commit?.committer?.date || commit?.date }}
     </p>
   </div>
 </div>

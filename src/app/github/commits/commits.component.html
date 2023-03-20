@@ -1,4 +1,6 @@
-<div class="flex-1 bg-white rounded-lg shadow-xl mt-4 p-8">
+<div
+  class="overflow-auto box-size flex-1 bg-white rounded-lg shadow-xl mt-4 p-8"
+>
   <div class="flex">
     <div>
       <h4 class="text-xl text-gray-900 font-bold mr-5">Activity log</h4>
@@ -28,9 +30,11 @@
 
   <div class="relative px-4">
     <div
-      class="absolute h-full border border-dashed border-opacity-20 border-secondary"
+      class="absolute h-6 border border-dashed border-opacity-20 border-secondary"
     ></div>
 
+    <app-list *ngFor="let commit of commitRealTime" [commit]="commit">
+    </app-list>
     <app-list *ngFor="let commit of commitList" [commit]="commit"> </app-list>
   </div>
 </div>

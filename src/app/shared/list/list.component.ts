@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Commit } from '../models/commit.model';
+import { Commit, CommitSocket } from '../models/commit.model';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +7,7 @@ import { Commit } from '../models/commit.model';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  @Input() commit!: Commit;
+  @Input() commit!: any;
 
   constructor() {}
 
