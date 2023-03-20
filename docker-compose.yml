@@ -1,0 +1,14 @@
+version: "3"
+services:
+  github-test-frontend:
+    build: .
+    image: github-test-frontend
+    ports:
+      - "4000:80"
+    networks:
+      - commits-net
+
+networks:
+  commits-net:
+    name: external-net
+    external: true
